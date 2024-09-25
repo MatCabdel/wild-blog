@@ -1,7 +1,32 @@
 <div class="container">
-  <h1>coucou petite perruche !</h1>
-  <p>
-    Alors dans mon article ça va surtout parler de perruches et de Francois
-    Damiens
-  </p>
+  <h1>{{ article.title }}</h1>
+  <h2>coucou petite perruche !</h2>
+
+  <div *ngIf="article.isPublished">
+    <h2>Contenu de l'article</h2>
+    <p>{{ article.content }}</p>
+    <p>Auteur : {{ article.author }}</p>
+    <div class="img-container">
+      <img [src]="article.image" [alt]="article.title" />
+    </div>
+  </div>
+
+  <div class="btn-container">
+    <button (click)="togglePublication()">{{ article.isPublished ? 'Dépublier' : 'Publier' }}</button>
+  </div>
+
+  <div class="input-container">
+    <input
+      type="text"
+      [(ngModel)]="article.comment"
+      placeholder="Ajoutez un commentaire"
+    />
+  </div>
+  <div class="comment">
+    <p>{{ article.comment }}</p>
+  </div>
+  
+  <div class="published">
+    <p>État de publication : {{ article.isPublished ? 'Publié' : 'Non publié' }}</p>
+  </div>
 </div>
