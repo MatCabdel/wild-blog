@@ -1,0 +1,19 @@
+<div class="calculatrice-container">
+  <div class="result">
+    <div>{{ firstNumber }} {{ operator }} {{ secondNumber }}</div>
+    <span *ngIf="result !== null"> = {{ result }}</span>
+  </div>
+  <div class="numbers">
+  <button (click)="giveFirstNumber()">chiffre aleatoire</button>
+  <button (click)="giveSecondNumber()">chiffre aleatoire</button>
+</div>
+  <div class="operator">
+    <button (click)="chooseOperator('+')">+</button>
+    <button (click)="chooseOperator('-')">-</button>
+    <button (click)="chooseOperator('/')">/</button>
+    <button (click)="chooseOperator('*')">*</button>
+  </div>
+  <div class="btn-result">
+  <button (click)="calculateResult()">=</button>
+</div>
+</div>
