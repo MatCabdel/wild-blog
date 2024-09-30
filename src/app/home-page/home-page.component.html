@@ -2,4 +2,6 @@
   <a [routerLink]="['/contact']">Contact</a>
   <a [routerLink]="['/signup']">Se connecter</a>
 </nav>
-<app-article-component [articleList]="articleList"></app-article-component>
+<p>{{ messageFromChild }}</p>
+<app-article-component [articleList]="articleList" (notifyParent)="handleNotification($event)"></app-article-component>
+

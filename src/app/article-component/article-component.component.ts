@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
 import { Article } from '../models/article.model';
@@ -14,8 +14,14 @@ import { Article } from '../models/article.model';
 export class ArticleComponentComponent {
 
   @Input() articleList: Article[] = [];
+  @Output() notifyParent: EventEmitter<string> = new EventEmitter<string>();
   
   togglePublication(i: number): void {
     this.articleList[i].isPublished = !this.articleList[i].isPublished;
   } 
+
+  sendLike(i: number) {
+    const likedArticleTitle = this.articleList[i].title;
+    this.notifyParent.emit(likedArticleTitle);
+  }
 }

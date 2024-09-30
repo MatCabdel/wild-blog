@@ -11,6 +11,12 @@ import { RouterLink } from '@angular/router';
 })
 export class HomePageComponent {
 
+  messageFromChild: string = '';
+
+  handleNotification(articleTitle: string) {
+    this.messageFromChild = `L'article "${articleTitle}" a été liké.`;
+  }
+
   articleList = [
     {
       id: 1,
