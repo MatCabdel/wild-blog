@@ -1,7 +1,8 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
+import { Article } from '../models/article.model';
 
 @Component({
   selector: 'app-article-component',
@@ -11,30 +12,10 @@ import { RouterLink } from '@angular/router';
   styleUrl: './article-component.component.scss',
 })
 export class ArticleComponentComponent {
-  articleList = [
-    {
-      id: 1,
-      title: 'Mon premier article',
-      author: 'Moi même, le 25 septembre 2025',
-      content:
-        'Alors dans mon article ça va surtout parler de perruches et de Francois Damiens',
-      image: 'https://via.placeholder.com/350x150',
-      isPublished: true,
-      comment: '',
-    },
-    {
-      id: 2,
-      title: 'Mon 2em article',
-      author: 'Moi même, le 25 septembre 2025',
-      content:
-        'Alors dans mon article ça va surtout parler de perruches et de Francois Damiens',
-      image: 'https://via.placeholder.com/350x150',
-      isPublished: true,
-      comment: '',
-    },
-  ];
 
+  @Input() articleList: Article[] = [];
+  
   togglePublication(i: number): void {
     this.articleList[i].isPublished = !this.articleList[i].isPublished;
-  }
+  } 
 }
