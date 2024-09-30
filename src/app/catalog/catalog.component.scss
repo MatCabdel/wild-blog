@@ -1,0 +1,16 @@
+ul {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  justify-content: center;
+  gap: 10px;
+}
+
+.product-container {
+  padding: 10px;
+  background-color: rgb(251, 221, 221);
+  width: 200px;
+  height: auto;
+  border: 3px rgba(0, 0, 0, 0.048);
+  border-radius: 8px;
+}

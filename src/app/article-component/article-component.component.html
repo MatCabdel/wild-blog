@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" *ngFor="let article of articleList; let i = index">
   <h1>{{ article.title }}</h1>
   <h2>coucou petite perruche !</h2>
 
@@ -12,7 +12,9 @@
   </div>
 
   <div class="btn-container">
-    <button (click)="togglePublication()">{{ article.isPublished ? 'Dépublier' : 'Publier' }}</button>
+    <button (click)="togglePublication(i)">
+      {{ article.isPublished ? "Dépublier" : "Publier" }}
+    </button>
   </div>
 
   <div class="input-container">
@@ -25,8 +27,11 @@
   <div class="comment">
     <p>{{ article.comment }}</p>
   </div>
-  
+
   <div class="published">
-    <p>État de publication : {{ article.isPublished ? 'Publié' : 'Non publié' }}</p>
+    <p>
+      État de publication : {{ article.isPublished ? "Publié" : "Non publié" }}
+    </p>
   </div>
+  <a [routerLink]="['/article', article.id]">Voir details</a>
 </div>
