@@ -25,7 +25,7 @@ export class HomePageComponent {
       author: 'Moi même, le 25 septembre 2025',
       content:
         'Alors dans mon article ça va surtout parler de perruches et de Francois Damiens',
-      image: 'https://via.placeholder.com/350x150',
+      image: './assets/perruchedamiens.jpg',
       isPublished: true,
       comment: '',
     },

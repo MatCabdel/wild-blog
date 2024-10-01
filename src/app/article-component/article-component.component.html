@@ -5,12 +5,10 @@
       <img [src]="article.image" [alt]="article.title" />
     </div>
     <div *ngIf="article.isPublished">
-      <h2>Contenu de l'article</h2>
       <p>{{ article.content }}</p>
-
     </div>
 
-    <div class="btn-container">
+   <!--  <div class="btn-container">
       <button (click)="togglePublication(i)">
         {{ article.isPublished ? "Dépublier" : "Publier" }}
       </button>
@@ -26,17 +24,13 @@
     <div class="comment">
       <p>{{ article.comment }}</p>
     </div>
-
-    <div class="published">
-      <p>
-        État de publication :
-        {{ article.isPublished ? "Publié" : "Non publié" }}
-      </p>
-    </div>
-    <a [routerLink]="['/article', article.id]">Voir details</a>
+    <a [routerLink]="['/article', article.id]">Voir details</a> -->
+    <div class="buttons-footer">
     <button (click)="sendLike(i)">Je like</button>
+    <button>Commenter</button>
+  </div>
     <div class="footer-article">
-      <p>Publié par {{ article.author }}</p>
+      <p>{{ article.isPublished ? "Publié" : "Non publié" }} par {{ article.author }}</p>
     </div>
   </div>
 </div>

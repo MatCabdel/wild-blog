@@ -19,12 +19,20 @@
     display: flex;
     justify-content: end;
 
+    input {
+      background-color: #343434;
+      width: 300px;
+      padding-left: 15px;
+      font-size: 1.1em;
+    }
+
     button {
       border: none;
       padding: 5px 15px;
       border-radius: 2px;
       height: 60px;
       width: 150px;
+      cursor: pointer;
     }
 
     nav {
