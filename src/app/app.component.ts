@@ -4,11 +4,12 @@ import { ArticleComponentComponent } from "./article-component/article-component
 import { CardComponent } from './card/card.component';
 import { CalculatriceComponent } from './calculatrice/calculatrice.component';
 import { CatalogComponent } from './catalog/catalog.component';
+import { HeaderComponent } from './header/header.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, ArticleComponentComponent, CardComponent, CalculatriceComponent, CatalogComponent],
+  imports: [RouterOutlet, ArticleComponentComponent, CardComponent, CalculatriceComponent, CatalogComponent, HeaderComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

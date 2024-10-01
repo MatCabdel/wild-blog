@@ -1,11 +1,12 @@
 import { Component, Input } from '@angular/core';
 import { ArticleComponentComponent } from "../article-component/article-component.component";
 import { RouterLink } from '@angular/router';
+import { HeaderComponent } from '../header/header.component';
 
 @Component({
   selector: 'app-home-page',
   standalone: true,
-  imports: [ArticleComponentComponent, RouterLink],
+  imports: [ArticleComponentComponent, RouterLink, HeaderComponent],
   templateUrl: './home-page.component.html',
   styleUrl: './home-page.component.scss'
 })
