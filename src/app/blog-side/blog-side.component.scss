@@ -1,0 +1,40 @@
+.title-blog {
+  width: 95%;
+  padding: 5px;
+
+  h3 {
+    color: white;
+    background-color: #1da9ff;
+    text-align: center;
+    padding: 10px;
+    border-radius: 8px;
+  }
+}
+p {
+  color: white;
+  padding: 10px;
+  font-size: 1.2em;
+}
+
+.tag-blog {
+  width: 95%;
+  padding: 5px;
+
+  h3 {
+    color: white;
+    background-color: #1da9ff;
+    text-align: center;
+    padding: 10px;
+    border-radius: 8px;
+  }
+  p {
+    color: #1da9ff;
+    padding: 10px;
+    font-size: 1.3em;
+    font-weight: bold;
+  }
+}
+
+strong {
+  color: rgb(0, 119, 255);
+}

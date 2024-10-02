@@ -2,11 +2,13 @@ import { Component, Input } from '@angular/core';
 import { ArticleComponentComponent } from "../article-component/article-component.component";
 import { RouterLink } from '@angular/router';
 import { HeaderComponent } from '../header/header.component';
+import { ProfilSideComponent } from '../profil-side/profil-side.component';
+import { BlogSideComponent } from '../blog-side/blog-side.component';
 
 @Component({
   selector: 'app-home-page',
   standalone: true,
-  imports: [ArticleComponentComponent, RouterLink, HeaderComponent],
+  imports: [ArticleComponentComponent, RouterLink, HeaderComponent, ProfilSideComponent, BlogSideComponent],
   templateUrl: './home-page.component.html',
   styleUrl: './home-page.component.scss'
 })
@@ -35,7 +37,7 @@ export class HomePageComponent {
       author: 'Moi même, le 25 septembre 2025',
       content:
         'Alors dans mon article ça va surtout parler de perruches et de Francois Damiens',
-      image: 'https://via.placeholder.com/350x150',
+      image: './assets/damiensf.jpeg',
       isPublished: true,
       comment: '',
     },

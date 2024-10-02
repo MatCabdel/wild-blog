@@ -1,10 +1,13 @@
 import { Component, inject } from '@angular/core';
 import { AbstractControl, FormBuilder, ReactiveFormsModule, ValidationErrors, ValidatorFn, Validators } from '@angular/forms';
+import { HeaderComponent } from '../header/header.component';
+import { ProfilSideComponent } from '../profil-side/profil-side.component';
+import { BlogSideComponent } from '../blog-side/blog-side.component';
 
 @Component({
   selector: 'app-signup-form',
   standalone: true,
-  imports: [ ReactiveFormsModule ],
+  imports: [ ReactiveFormsModule, HeaderComponent, ProfilSideComponent, BlogSideComponent ],
   templateUrl: './signup-form.component.html',
   styleUrl: './signup-form.component.scss'
 })
